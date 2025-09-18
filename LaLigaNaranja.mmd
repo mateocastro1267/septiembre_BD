@@ -9,7 +9,7 @@ classDiagram
 
     class Inscripcion {
         +id_inscripcion: INT
-        +fecha: DATE
+        +fecha_inscripcion: DATE
         +puntaje_inicial: INT
     }
 
@@ -19,23 +19,21 @@ classDiagram
         +direccion: VARCHAR
         +fecha_nacimiento: DATE
         +tipo_entrenador: VARCHAR
-        +region: VARCHAR
     }
 
     class Combate {
         +id_combate: INT
         +fecha: DATE
         +lugar: VARCHAR
-        +estado: VARCHAR
-        +resultado: VARCHAR
-        +temporada: VARCHAR
+        +perdecor: VARCHAR
+        +ganador: VARCHAR
+        +perdedor: VARCHAR
     }
 
     class Participacion {
         +id_participacion: INT
-        +equipo_usado: TEXT
+        +equipo_usado: VARCHAR
         +puntaje_obtenido: INT
-        +resultado: VARCHAR
     }
 
     class EquipoPokemon {
@@ -76,39 +74,6 @@ classDiagram
         +efecto: TEXT
     }
 
-
-
-    class Reportes {
-        +realizarConsulta1()
-        +realizarConsulta2()
-        +realizarConsulta3()
-    }
-
-
-    class Consulta1 {
-        +filtrarEntrenadoresLideres()
-        +contarPokemonsDeTipo()
-        +excluirRegion()
-        +mostrarEntrenadoresValidos()
-    }
-
-
-    class Consulta2 {
-        +filtrarCombatesUltimos3Meses()
-        +agruparCombatesPorEstado()
-        +sumarPuntosPorEstado()
-        +mostrarEstadosSuperioresA500()
-    }
-
-    class Consulta3 {
-        +filtrarEntrenadoresParticipantes()
-        +identificarVictoriasPorTemporada()
-        +contarVictorias()
-        +calcularPromedioPuntos()
-        +mostrarResultados()
-    }
-
-
     Liga "1" --> "*" Inscripcion : contiene
     Entrenador "1" --> "*" Inscripcion : realiza
 
@@ -125,7 +90,3 @@ classDiagram
     Ataque "1" --> "*" UsoAtaque : disponible
 
     Objeto "1" --> "*" Pokemon : equipa
-
-    Reportes --> Consulta1 : desencadena
-    Reportes --> Consulta2 : desencadena
-    Reportes --> Consulta3 : desencadena
