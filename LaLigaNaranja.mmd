@@ -1,0 +1,90 @@
+classDiagram
+    class Liga {
+        +id_liga: INT
+        +nombre: VARCHAR
+        +temporada: VARCHAR
+        +fecha_inicio: DATE
+        +fecha_fin: DATE
+    }
+
+    class Inscripcion {
+        +id_inscripcion: INT
+        +fecha: DATE
+        +puntaje_inicial: INT
+    }
+
+    class Entrenador {
+        +id_entrenador: INT
+        +nombre: VARCHAR
+        +direccion: VARCHAR
+        +fecha_nacimiento: DATE
+        +tipo_entrenador: VARCHAR
+    }
+
+    class Combate {
+        +id_combate: INT
+        +fecha: DATE
+        +lugar: VARCHAR
+        +resultado: VARCHAR
+    }
+
+    class Participacion {
+        +id_participacion: INT
+        +equipo_usado: TEXT
+        +puntaje_obtenido: INT
+    }
+
+    class EquipoPokemon {
+        +id_equipo: INT
+        +rol: VARCHAR
+    }
+
+    class Pokemon {
+        +id_pokemon: INT
+        +mote: VARCHAR
+        +nivel: INT
+        +salud: INT
+    }
+
+    class Especie {
+        +id_especie: INT
+        +nombre: VARCHAR
+        +altura: FLOAT
+        +peso: FLOAT
+        +tipo: VARCHAR
+        +habilidades: TEXT
+    }
+
+    class Ataque {
+        +id_ataque: INT
+        +nombre: VARCHAR
+        +tipo: VARCHAR
+        +efecto: TEXT
+    }
+
+    class UsoAtaque {
+        +id_uso: INT
+    }
+
+    class Objeto {
+        +id_objeto: INT
+        +nombre: VARCHAR
+        +efecto: TEXT
+    }
+
+    Liga "1" --> "*" Inscripcion : contiene
+    Entrenador "1" --> "*" Inscripcion : realiza
+
+    Entrenador "1" --> "*" Pokemon : posee
+    Especie "1" --> "*" Pokemon : pertenece
+
+    Combate "1" --> "*" Participacion : registra
+    Entrenador "1" --> "*" Participacion : compite
+
+    Participacion "1" --> "*" EquipoPokemon : forma
+    Pokemon "1" --> "*" EquipoPokemon : integra
+
+    Pokemon "1" --> "*" UsoAtaque : aprende
+    Ataque "1" --> "*" UsoAtaque : disponible
+
+    Objeto "1" --> "*" Pokemon : equipa
