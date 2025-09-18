@@ -1,1 +1,9 @@
 Si te parece poco o queres que lo modifique respondeme este txt
+
+Consultas
+
+1-el area de recurss humanos desea obtener un reporte que muestre todos los entrenadores que sean lideres de gimnasio, que tengan al menos 6 pokemons de tipo fuego y que no sean de la region kanto
+2-el comite de arbitraje desea obtener la cantidad de combates realizados por estado (pendiente, en curso, finalizado) durante los ultimos 3 meses, asi como el total de puntos entregados en cada estado. se deben mostrar unicamente aquellos estadis en los que sla suma de puntos entregados supere los 500
+3-el area de estadisticas cimpetitivas desea conocer por entrenador que hayan ganado al menos un combate por temporada, mostrando su nombre, la cantidad de victorias y el promedio de puntos ganados en esas victorias. solo deben considerarse aquellos entrenadores cuyo tipo sea participante
+
+DECILE QUE CADA CONSULTA LAS PUEDE USAR COMO METODOS, COMO METODOS DESENCADENANTES ES DECIR = REALIZAR CONSULTA 1...2...3 Y ADENTRO SUS SUBMETODOS
