@@ -7,3 +7,6 @@ Consultas
 3-el area de estadisticas cimpetitivas desea conocer por entrenador que hayan ganado al menos un combate por temporada, mostrando su nombre, la cantidad de victorias y el promedio de puntos ganados en esas victorias. solo deben considerarse aquellos entrenadores cuyo tipo sea participante
 
 DECILE QUE CADA CONSULTA LAS PUEDE USAR COMO METODOS, COMO METODOS DESENCADENANTES ES DECIR = REALIZAR CONSULTA 1...2...3 Y ADENTRO SUS SUBMETODOS
+
+
+ahi lo hago
